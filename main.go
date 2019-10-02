@@ -19,10 +19,10 @@ func main() {
 	fmt.Scanf("%d", &input)
 	fmt.Println()
 
-	if input == 0 || input > len(translations) {
-		greeting = "Yo"
-	} else {
+	if input > 0 && input <= len(translations) {
 		greeting = translations[input-1]
+	} else {
+		greeting = "Yo"
 	}
 
 	fmt.Println(greeting + ", Go!")
