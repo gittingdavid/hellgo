@@ -6,16 +6,18 @@ import (
 
 func main() {
 	var input int
+	var greeting string
 	var languages = [4]string{"English", "Spanish", "German", "French"}
+	var translations = [4]string{"Hello", "Hola", "Guten Tag", "Bonjour"}
+
 	for i := 0; i < len(languages); i++ {
-		fmt.Println(i+1, ") ", languages[i])
+		//fmt.Println(i+1, ") ", languages[i])
+		fmt.Print(i+1, ") ")
+		fmt.Println(languages[i])
 	}
 	fmt.Print("Input Number: ")
 	fmt.Scanf("%d", &input)
 	fmt.Println()
-
-	var greeting string
-	var translations = [4]string{"Hello", "Hola", "Guten Tag", "Bonjour"}
 
 	if input == 0 || input > len(translations) {
 		greeting = "Yo"
